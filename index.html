@@ -1,7 +1,13 @@
 <html>
-<script type="text/javascript">
-    var el = document.getElementById('foo');
-    el.onclick = convertFoo;
+
+<body>
+<input type="text" id="input" name="input">
+<button type="button" id="foo">Click Me!</button>  
+<div id="result"></div>
+</body>
+  
+<script>
+document.getElementById('foo').onclick = convertFoo;
 
 function convertFoo(){
   var input = document.getElementById("input").value;
@@ -11,9 +17,4 @@ function convertFoo(){
   document.getElementById("result").innerHTML = pageId;
 }
 </script>
-<body>
-<input type="text" id="input" name="input">
-<button type="button" id="foo">Click Me!</button>  
-<div id="result"></div>
-</body>
 </html>
