@@ -1,17 +1,14 @@
 <html>
 <script type="text/javascript">
     var el = document.getElementById('foo');
-el.onclick = convertFoo;
+    el.onclick = convertFoo;
 
 function convertFoo(){
   var input = document.getElementById("input").value;
-  var theDiv = document.getElementById("result");
   var l = input.length-32;
   var id = input.slice(l);
   var pageId =  id.slice(0,8)+"-"+id.slice(9,13)+"-"+id.slice(14,18)+"-"+id.slice(19,23)+"-"+id.slice(24,36);
-
-  var content = document.createTextNode(pageId);
-  theDiv.appendChild(content);
+  document.getElementById("result").innerHTML = pageId;
 }
 </script>
 <body>
