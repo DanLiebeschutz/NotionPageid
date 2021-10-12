@@ -23,15 +23,15 @@ body {
   <div id=""><h4>Paste the notion page url from your browser here:</h4></div>
   <div>
 <input type="text" id="input" name="input" style="width: 250px;">
-<button type="button" id="foo">Extract Notion page id</button> 
+<button type="button" id="notion">Extract Notion page id</button> 
   </div>
 <div id="result"></div>
 </body>
   
 <script type="text/javascript">
-document.getElementById('foo').onclick = convertFoo;
+document.getElementById('notion').onclick = convertNotion;
 
-function convertFoo(){
+function convertNotion(){
   var input = document.getElementById("input").value;
   var l = input.length-32;
   var id = input.slice(l);
