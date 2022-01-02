@@ -47,7 +47,7 @@ function getQueryVariable(variable) {
 }
 
   //text queryy
-  var defaultText = 'This time we have nothing to show you'
+  var defaultText = 'Nothing to see here..';
   var text = getQueryVariable("text");
   if(text){var decodedText = decodeURIComponent(text);
   document.getElementById("showMe").innerHTML = decodedText;}
