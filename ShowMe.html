@@ -5,7 +5,7 @@
 
 
   :root{
-  --size: '500%';
+  --size: 500%;
   --color: 'red';
   }
   
@@ -54,8 +54,12 @@ var color = getQueryVariable("color");
  
 
 document.getElementById("showMe").innerHTML = decodedText;
+if(size){
 document.documentElement.style.setProperty('--size',size);
+}
+if(color){
 document.documentElement.style.setProperty('--color',color);
+}
 
 </script>
 </html>
