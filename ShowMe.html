@@ -5,7 +5,8 @@
 
 
   :root{
-  --size: 100%;
+  --size: 500%;
+  --color: 'red';
   }
   
 html, body {
@@ -24,6 +25,7 @@ body {
 
 div {
 font-size: var(--size);
+font-color: var(--color);
 }
 </style>
 </head>
@@ -49,8 +51,9 @@ var size = getQueryVariable("size");
 var color = getQueryVariable("color");
  
 
-document.getElementById("showMe").innerHTML = size;
+document.getElementById("showMe").innerHTML = color;
 document.documentElement.style.setProperty('--size',size);
+document.documentElement.style.setProperty('--color',color);
 
 </script>
 </html>
