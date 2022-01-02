@@ -46,12 +46,12 @@ function getQueryVariable(variable) {
        return(false);
 }
 
-var show = getQueryVariable("value");
+var text = getQueryVariable("text");
 var size = getQueryVariable("size");
 var color = getQueryVariable("color");
  
 
-document.getElementById("showMe").innerHTML = color;
+document.getElementById("showMe").innerHTML = text;
 document.documentElement.style.setProperty('--size',size);
 document.documentElement.style.setProperty('--color',color);
 
