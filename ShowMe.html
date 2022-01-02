@@ -47,11 +47,13 @@ function getQueryVariable(variable) {
 }
 
 var text = getQueryVariable("text");
+var decodedText = decodeURIComponent(text);
+  
 var size = getQueryVariable("size");
 var color = getQueryVariable("color");
  
 
-document.getElementById("showMe").innerHTML = text;
+document.getElementById("showMe").innerHTML = decodedText;
 document.documentElement.style.setProperty('--size',size);
 document.documentElement.style.setProperty('--color',color);
 
