@@ -1,12 +1,11 @@
 # ShowMe
 A simple webpage that you can send text and attributes through the url queries.
 
-## Queries:
-### text
-[http://danliebeschutz.github.io/ToolBox/ShowMe.html?text=Hello World](url)
+## Use cases
+* Webhook resposes with dynamic data
+* What else?
 
-### size
-[http://danliebeschutz.github.io/ToolBox/ShowMe.html?text=Hello World&size=300%](url)
-
-### color
-[http://danliebeschutz.github.io/ToolBox/ShowMe.html?text=Hello World&color=blue](url)
+## Queries you can use:
+* text - http://danliebeschutz.github.io/ToolBox/ShowMe.html?text=Hello
+* size - http://danliebeschutz.github.io/ToolBox/ShowMe.html?text=Hello&size=800%
+* color - http://danliebeschutz.github.io/ToolBox/ShowMe.html?text=Hello&color=blue
