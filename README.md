@@ -1,6 +1,5 @@
 # ShowMe
 A simple webpage that you can send text and attributes through the url queries.
-Root URL: http://danliebeschutz.github.io/ToolBox/ShowMe
 
 ## Use cases
 * Webhook resposes with dynamic data
