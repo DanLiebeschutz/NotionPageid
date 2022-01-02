@@ -2,6 +2,12 @@
   
   <head>
 <style>
+
+
+  :root{
+  --size: 800%
+  }
+  
 html, body {
     height: 100%;
 }
@@ -17,7 +23,7 @@ body {
 }
 
 div {
-font-size: 800%;
+font-size: var(--size);
 }
 </style>
 </head>
@@ -39,8 +45,12 @@ function getQueryVariable(variable) {
 }
 
 var show = getQueryVariable("value");
+var size = getQueryVariable("size");
+var color = getQueryVariable("color");
+ 
+
 document.getElementById("showMe").innerHTML = show;
-console.log(getQueryVariable("value"));
+//document.documentElement.style.setProperty('--size','200%');
 
 </script>
 </html>
