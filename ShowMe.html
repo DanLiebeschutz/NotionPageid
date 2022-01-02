@@ -46,20 +46,20 @@ function getQueryVariable(variable) {
        return(false);
 }
 
-var text = getQueryVariable("text");
-var decodedText = decodeURIComponent(text);
-  
-var size = getQueryVariable("size");
-var color = getQueryVariable("color");
- 
+  //text queryy
+  var defaultText = 'This time we have nothing to show you'
+  var text = getQueryVariable("text");
+  if(text){var decodedText = decodeURIComponent(text);
+  document.getElementById("showMe").innerHTML = decodedText;}
+  else{document.getElementById("showMe").innerHTML = defaultText;}
 
-document.getElementById("showMe").innerHTML = decodedText;
-if(size){
-document.documentElement.style.setProperty('--size',size);
-}
-if(color){
-document.documentElement.style.setProperty('--color',color);
-}
+  //size query
+  var size = getQueryVariable("size");
+  if(size){document.documentElement.style.setProperty('--size',size);}
+  
+  //color query
+  var color = getQueryVariable("color");
+  if(color){document.documentElement.style.setProperty('--color',color);}
 
 </script>
 </html>
