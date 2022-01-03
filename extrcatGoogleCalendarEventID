@@ -1,0 +1,71 @@
+<html>
+  
+  <head>
+<style>
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+</head>
+
+<body align="center">
+  <div id=""><h3>Notion page id extractor</h3></div>
+  <div id=""><h4>Paste the notion page url from your browser here:</h4></div>
+  <div>
+<input type="text" id="input" name="input" style="width: 250px;">
+<button type="button" id="notion">Extract Notion page id</button>
+<button type="button" id="event_id">Extract Google calendar event id</button> 
+  </div>
+<div id="result"></div>
+  
+<div id="showMe"></div>
+</body>
+  
+<script type="text/javascript">
+
+function getQueryVariable(variable) {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+var show = getQueryVariable("value");
+document.getElementById("showMe").innerHTML = show;
+console.log(getQueryVariable("value"));
+
+  
+  
+document.getElementById('notion').onclick = convertNotion;
+document.getElementById('event_id').onclick = decode64;
+
+function convertNotion(){
+  var input = document.getElementById("input").value;
+  var l = input.length-32;
+  var id = input.slice(l);
+  var pageId =  id.slice(0,8)+"-"+id.slice(9,13)+"-"+id.slice(14,18)+"-"+id.slice(19,23)+"-"+id.slice(24,36);
+  document.getElementById("result").innerHTML = pageId;
+}
+  
+  function decode64(){
+  // Decode the String
+  var encodedString = document.getElementById("input").value;
+  var decodedString = atob(encodedString);
+  document.getElementById("result").innerHTML = decodedString;
+  console.log(decodedString); // Output
+  }
+</script>
+</html>
