@@ -24,7 +24,7 @@ body {
   <div>
 <input type="text" id="input" name="input" style="width: 250px;">
 
-<button type="button" id="event_id">Extract Google calendar event id</button> 
+<button type="button" id="event_id" onclick="decodeGoogleEventUrl()">Extract Google calendar event id</button> 
   </div>
 <div id="result"></div>
   
@@ -32,7 +32,7 @@ body {
   
   
 
-document.getElementById('event_id').onclick = decodeGoogleEventUrl();
+//document.getElementById('event_id').onclick = decodeGoogleEventUrl();
 
 function decodeGoogleEventUrl(){
   var encodedString = document.getElementById("input").value;
