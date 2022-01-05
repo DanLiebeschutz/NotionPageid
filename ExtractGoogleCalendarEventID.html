@@ -38,7 +38,7 @@ function decodeGoogleEventUrl(){
   var encodedString = document.getElementById("input").value;
   console.log('encodedString :' + encodedString);
   //let l = input.length-53;
-  let calBase64 = input.slice(53,136);
+  let calBase64 = encodedString.slice(53,136);
   console.log('calBase64 :'+ calBase64);
   let calDecoded =  decode64(calBase64);
   console.log('calDecoded :' + calDecoded);
